@@ -1,0 +1,65 @@
+.main-screen {
+  min-height: 975px;
+  padding: calc(210px + $headerHeight) 0 45px;
+  background: url("../../../img/homepage/main-screen.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__body {
+    display: grid;
+    justify-content: start;
+    justify-items: start;
+    text-align: left;
+    gap: 118px;
+  }
+  &__title {
+    font-family: $third-family;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 150%;
+    letter-spacing: 0.01px;
+    color: #fff;
+    max-width: 1400px;
+    width: 100%;
+    text-align: left;
+    padding-left: 101px;
+  }
+  &__progress {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+  }
+  &__line {
+    width: calc(100% + 101px);
+    height: 71px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-90px, -50%);
+    left: 0;
+    background: #2e2bd0;
+    z-index: -1;
+    animation: mark 1s linear 0.5s;
+  }
+  &__button {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+}
+
+@keyframes mark {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% + 101px);
+  }
+}

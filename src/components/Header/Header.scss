@@ -1,0 +1,120 @@
+.header {
+  font-family: "Montserrat";
+  min-height: $headerHeight;
+  background-color: transparent;
+  padding: 0px 34px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 491px;
+    width: 100%;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      animation: line 2s linear 0s;
+    }
+  }
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 63px;
+    padding: 27px 0;
+  }
+  &__menu {
+  }
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    &-text {
+      font-weight: 700;
+      font-size: 24px;
+      font-family: $font5;
+      max-width: 137px;
+      color: #fff;
+      line-height: 100%;
+    }
+  }
+  &__link {
+    align-self: start;
+  }
+  &__actions {
+    padding: 27px 0;
+    display: grid;
+    justify-content: end;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background-color: #fff;
+      animation: lineDown 1s linear 0.5s;
+    }
+  }
+}
+
+.menu {
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  &__item {
+    width: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
+    // padding: 0 26px;
+    transition: color 0.25s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #2e2bd0;
+      }
+    }
+  }
+}
+
+@keyframes lineDown {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

@@ -1,0 +1,28 @@
+.services {
+  padding: 62px 0 110px;
+  &__body {
+    display: grid;
+    margin-left: auto;
+    max-width: 1026px;
+    gap: 33px;
+  }
+}
+
+.item-services {
+  font-family: $second-family;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  &__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 130%;
+    color: #2e2bd0;
+    margin-bottom: 58px;
+  }
+  &__descr {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 122%;
+    color: #000;
+  }
+}

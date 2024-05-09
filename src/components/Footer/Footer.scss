@@ -1,0 +1,74 @@
+@use "sass:math";
+.footer {
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 0 178px;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+  &__logo {
+    margin-bottom: 100px;
+  }
+  &__email {
+    font-family: font6;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+
+    color: #2e2bd0;
+  }
+  &__social {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__menu {
+  }
+  &__actions {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+a.footer__email {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.social-footer {
+  &__link {
+    border: 1.12px solid #2e2bd0;
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.menu-footer {
+  display: flex;
+  gap: 0 121px;
+  align-items: flex-start;
+  &__list {
+    gap: 16px;
+  }
+  &__link {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    color: #000;
+    transition: color 0.25s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #2e2bd0;
+      }
+    }
+  }
+}

@@ -1,0 +1,308 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../public/fonts/Inconsolata-Regular.woff2") format("woff2"),
+    url("../public/fonts/Inconsolata-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-Medium.woff2") format("woff2"),
+    url("../public/fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("../public/fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../public/fonts/NeueMachina-Regular.woff2") format("woff2"),
+    url("../public/fonts/NeueMachina-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-Regular.woff2") format("woff2"),
+    url("../public/fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../public/fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Semi";
+  src: url("../public/fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("../public/fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../public/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("../public/fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("../public/fonts/TTNorms-Bold.woff2") format("woff2"),
+    url("../public/fonts/TTNorms-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto-Light.woff2") format("woff2"),
+    url("../public/fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../public/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-family: "Inter", sans-serif;
+$second-family: "Roboto", sans-serif;
+$third-family: "Montserrat", sans-serif;
+$font3: "Neue Machina", sans-serif;
+$font4: "Inconsolata", sans-serif;
+$font5: "TT Norms", sans-serif;
+$font6: "Gilroy", sans-serif;
+$headerHeight: 119px;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -o-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+  -tap-highlight-color: rgba(0, 0, 0, 0);
+  &:focus,
+  &:active {
+    outline: 0px solid transparent;
+  }
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+input:focus {
+  outline: 0px solid transparent;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input::-ms-clear {
+  display: none;
+}
+button,
+input,
+textarea {
+  font-family: $font-family;
+  font-size: inherit;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+a {
+  color: inherit;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+// scroll-bar
+* {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: rgba(47, 53, 63, 0.5);
+}
+*::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #2e2bd0;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(#2e2bd0, 0.5);
+}
+
+#root {
+  flex-grow: 1;
+  overflow: clip;
+  /* width: 100vw; */
+  /* height: 100%; */
+}
+
+h2 {
+  padding: 5px 0 5px 10px;
+  margin: 10px 0;
+  color: white;
+}
+
+.homepage {
+  overflow: clip;
+}
+
+.container {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.heading {
+  margin-bottom: 71px;
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #000;
+  }
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  border-radius: 10px;
+  background: #2e2bd0;
+  min-height: 59px;
+  padding: 9px 17px 9px 19px;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  text-transform: lowercase;
+  width: 254px;
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("./img/homepage/arrow-up.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+$xs: 479.98px;
+$sm: 576px;
+$md: 767.98px;
+$lg: 991.98px;
+$xl: 1023px;
+$xxl: 1200px;
+$xxxl: 1400px;
+
+@import "../src/components/Homepage/homepage.scss";
+@import "../src/components/PageForCalculator/pageForCalculator.css";
+@import "../src/components/Calculator/calculator.css";
+@import "../src/components/Cart/cart.css";
+@import "../src/components/List/list.css";
+@import "../src/components/ListItem/listItem.css";
+@import "../src/components/CartPage/cartpage.css";
+@import "../src/components/SuccessPage/successpage.css";
+
+@import "../src/components/Header/Header.scss";
+@import "../src/components/Footer/Footer.scss";
+@import "../src/components/sections/HomeScreen/HomeScreen.scss";
+@import "../src/components/sections/HomeAdvantages/HomeAdvantages.scss";
+@import "../src/components/sections/HomeServices/HomeServices.scss";
+@import "../src/components/sections/HomeSteps/HomeSteps.scss";
+@import "../src/components/sections/HomeConsultation/HomeConsultation.scss";

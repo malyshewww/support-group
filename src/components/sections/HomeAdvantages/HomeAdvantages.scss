@@ -1,0 +1,79 @@
+.advantages {
+  padding: 119px 0 61px;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "one one one one two two two two three three three three"
+      "four four four four four four five five five five five five"
+      "six six six six six six six seven seven seven seven seven";
+  }
+}
+.item-advantages {
+  margin-left: -1px;
+  min-height: 500px;
+  border: 1px solid #95989d;
+  border-radius: 70px;
+  overflow: hidden;
+  padding: 50px 50px 30px;
+  display: flex;
+  flex-direction: column;
+  &:nth-child(1) {
+    grid-area: one;
+  }
+  &:nth-child(2) {
+    grid-area: two;
+  }
+  &:nth-child(3) {
+    grid-area: three;
+    padding: 0;
+    border: 0;
+  }
+  &:nth-child(4) {
+    grid-area: four;
+    padding: 0;
+    border: 0;
+  }
+  &:nth-child(5) {
+    grid-area: five;
+  }
+  &:nth-child(6) {
+    grid-area: six;
+  }
+  &:nth-child(7) {
+    grid-area: seven;
+    padding: 0;
+    border: 0;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__num {
+    font-family: $font3;
+    font-size: 40px;
+    line-height: 100%;
+    color: #2e2bd0;
+    margin-bottom: 21px;
+  }
+  &__title {
+    font-family: $second-family;
+    font-weight: 400;
+    line-height: 130%;
+    color: #000;
+  }
+  &__descr {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 122%;
+    color: #000;
+    margin-top: 79px;
+  }
+}
