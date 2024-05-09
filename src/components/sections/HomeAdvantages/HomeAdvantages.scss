@@ -1,5 +1,11 @@
 .advantages {
   padding: 119px 0 61px;
+  @media screen and (max-width: $xxxl) {
+    padding: 60px 0;
+  }
+  @media screen and (max-width: $lg) {
+    padding: 40px 0;
+  }
   &__body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -9,10 +15,12 @@
       "one one one one two two two two three three three three"
       "four four four four four four five five five five five five"
       "six six six six six six six seven seven seven seven seven";
+    @media screen and (max-width: $lg) {
+      display: block;
+    }
   }
 }
 .item-advantages {
-  margin-left: -1px;
   min-height: 500px;
   border: 1px solid #95989d;
   border-radius: 70px;
@@ -20,6 +28,13 @@
   padding: 50px 50px 30px;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: $xxxl) {
+    padding: 20px 20px 30px;
+    border-radius: 30px;
+  }
+  @media screen and (max-width: $lg) {
+    min-height: 300px;
+  }
   &:nth-child(1) {
     grid-area: one;
   }
@@ -54,6 +69,16 @@
       height: 100%;
       width: 100%;
     }
+    @media screen and (max-width: $lg) {
+      display: flex;
+      position: relative;
+      padding-bottom: 100%;
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
   }
   &__num {
     font-family: $font3;
@@ -61,12 +86,18 @@
     line-height: 100%;
     color: #2e2bd0;
     margin-bottom: 21px;
+    @media screen and (max-width: $lg) {
+      font-size: 24px;
+    }
   }
   &__title {
     font-family: $second-family;
     font-weight: 400;
     line-height: 130%;
     color: #000;
+    @media screen and (max-width: $lg) {
+      font-size: 24px;
+    }
   }
   &__descr {
     font-family: $second-family;
@@ -75,5 +106,12 @@
     line-height: 122%;
     color: #000;
     margin-top: 79px;
+    @media screen and (max-width: $xxxl) {
+      margin-top: 50px;
+    }
+    @media screen and (max-width: $lg) {
+      font-size: 24px;
+      margin-top: 30px;
+    }
   }
 }

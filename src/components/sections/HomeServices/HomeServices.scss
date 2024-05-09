@@ -1,5 +1,11 @@
 .services {
   padding: 62px 0 110px;
+  @media screen and (max-width: $xxxl) {
+    padding: 60px 0 60px;
+  }
+  @media screen and (max-width: $lg) {
+    padding: 40px 0 40px;
+  }
   &__body {
     display: grid;
     margin-left: auto;
@@ -18,11 +24,18 @@
     line-height: 130%;
     color: #2e2bd0;
     margin-bottom: 58px;
+    @media screen and (max-width: $lg) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
   &__descr {
     font-weight: 300;
     font-size: 32px;
     line-height: 122%;
     color: #000;
+    @media screen and (max-width: $lg) {
+      font-size: 24px;
+    }
   }
 }

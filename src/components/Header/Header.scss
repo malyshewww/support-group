@@ -8,6 +8,10 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  @media screen and (max-width: $xxxl) {
+    padding: 0 10px;
+    min-height: 70px;
+  }
   &__body {
     display: grid;
     grid-template-columns: 1fr 491px;
@@ -23,12 +27,30 @@
       background-color: #fff;
       animation: line 2s linear 0s;
     }
+    @media screen and (max-width: $xxxl) {
+      grid-template-columns: 1fr auto;
+    }
+    @media screen and (max-width: $lg) {
+      padding: 15px 0;
+    }
+    @media screen and (max-width: $md) {
+      align-items: center;
+      gap: 20px;
+    }
   }
   &__main {
     display: flex;
     align-items: center;
     gap: 63px;
     padding: 27px 0;
+    @media screen and (max-width: $xxxl) {
+      justify-content: space-between;
+      gap: 20px;
+      padding-right: 20px;
+    }
+    @media screen and (max-width: $lg) {
+      padding: 0;
+    }
   }
   &__menu {
   }
@@ -43,6 +65,9 @@
       max-width: 137px;
       color: #fff;
       line-height: 100%;
+      @media screen and (max-width: $xxl) {
+        display: none;
+      }
     }
   }
   &__link {
@@ -63,10 +88,19 @@
       background-color: #fff;
       animation: lineDown 1s linear 0.5s;
     }
+    @media screen and (max-width: $xxxl) {
+      padding-left: 30px;
+    }
+    @media screen and (max-width: $lg) {
+      display: none;
+    }
   }
 }
 
 .menu {
+  @media screen and (max-width: $md) {
+    display: none;
+  }
   &__list {
     list-style: none;
     display: flex;
@@ -74,6 +108,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 25px;
+    @media screen and (max-width: $xxl) {
+      gap: 16px;
+    }
   }
   &__item {
     width: 235px;
@@ -81,6 +118,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    @media screen and (max-width: $xxxl) {
+      width: auto;
+    }
   }
   &__link {
     display: block;
@@ -97,6 +137,45 @@
       &:hover {
         color: #2e2bd0;
       }
+    }
+    @media screen and (max-width: $xxxl) {
+      font-size: 24px;
+    }
+  }
+}
+
+.header__burger {
+  display: none;
+  @media screen and (max-width: $md) {
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    & span,
+    &::before,
+    &::after {
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      left: 0;
+      transition: all 0.5s;
+    }
+    &::before,
+    &::after {
+      content: "";
+    }
+    & span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
     }
   }
 }

@@ -1,9 +1,25 @@
 .direction {
   padding: 110px 0 119px;
+  @media screen and (max-width: $xxxl) {
+    padding: 60px 0 60px;
+  }
+  @media screen and (max-width: $lg) {
+    padding: 40px 0 40px;
+  }
   &__body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 90px;
+    @media screen and (max-width: $xxxl) {
+      gap: 30px;
+    }
+    @media screen and (max-width: $xxl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $md) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
   &__link {
     min-height: 689px;
@@ -20,6 +36,15 @@
     border-radius: 50px;
     background-repeat: no-repeat;
     background-size: cover;
+    @media screen and (max-width: $xxxl) {
+      font-size: 50px;
+      min-height: 500px;
+    }
+    @media screen and (max-width: $md) {
+      font-size: 32px;
+      background-position: 0;
+      min-height: 400px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -32,7 +57,11 @@
         rgba(43, 75, 157, 0.51) 0%,
         rgba(112, 110, 118, 0.51) 100%
       );
+      border-radius: inherit;
       z-index: -1;
+      @media screen and (max-width: $md) {
+        content: none;
+      }
     }
     &:nth-child(1) {
       background-image: url("../../img/homepage/landing.svg");
@@ -53,9 +82,6 @@
   }
 }
 .homepage {
-  background-image: url("../../img/homepage/bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-template-rows: auto 1fr auto;
   scroll-behavior: smooth;

@@ -44,6 +44,9 @@ const Header = () => {
             Контакты
           </Link>
         </div>
+        <div className="header__burger">
+          <span></span>
+        </div>
       </div>
     </header>
   );

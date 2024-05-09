@@ -4,7 +4,7 @@ const HomeScreen = () => {
       <div className="container">
         <div className="main-screen__body">
           <h1 className="main-screen__title">
-            Создадим твой бизнес с нуля и
+            Создадим твой бизнес с нуля и{" "}
             <span className="main-screen__progress">
               продвинем на рынок без
               <span className="main-screen__line"></span>

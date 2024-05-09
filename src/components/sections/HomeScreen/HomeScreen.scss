@@ -4,12 +4,28 @@
   background: url("../../../img/homepage/main-screen.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: $xxxl) {
+    padding: calc(100px + $headerHeight) 0 45px;
+    min-height: 575px;
+    display: flex;
+    align-items: flex-end;
+  }
+  @media screen and (max-width: $lg) {
+    padding: 150px 0 40px;
+    min-height: auto;
+  }
+  @media screen and (max-width: $md) {
+    background-position: 50% 50%;
+  }
   &__body {
     display: grid;
     justify-content: start;
     justify-items: start;
     text-align: left;
     gap: 118px;
+    @media screen and (max-width: $xxxl) {
+      gap: 50px;
+    }
   }
   &__title {
     font-family: $third-family;
@@ -22,15 +38,28 @@
     width: 100%;
     text-align: left;
     padding-left: 101px;
+    @media screen and (max-width: $xxxl) {
+      padding-left: 0;
+      font-size: 50px;
+    }
+    @media screen and (max-width: $lg) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: $md) {
+      font-size: 28px;
+    }
   }
   &__progress {
     position: relative;
     display: inline-block;
     z-index: 3;
+    @media screen and (max-width: $lg) {
+      display: inline;
+    }
   }
   &__line {
     width: calc(100% + 101px);
-    height: 71px;
+    height: 80px;
     position: absolute;
     top: 50%;
     transform: translate(-90px, -50%);
@@ -38,6 +67,15 @@
     background: #2e2bd0;
     z-index: -1;
     animation: mark 1s linear 0.5s;
+    @media screen and (max-width: $xxxl) {
+      width: calc(100% + 12px);
+      transform: translate(-6px, -50%);
+      height: 71px;
+      animation-name: markTwo;
+    }
+    @media screen and (max-width: $lg) {
+      display: none;
+    }
   }
   &__button {
     width: 280px;
@@ -52,6 +90,11 @@
     text-align: center;
     color: #fff;
     border: 2px solid #fff;
+    @media screen and (max-width: $xxxl) {
+      width: 180px;
+      height: 180px;
+      font-size: 22px;
+    }
   }
 }
 
@@ -61,5 +104,14 @@
   }
   100% {
     width: calc(100% + 101px);
+  }
+}
+
+@keyframes markTwo {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% + 12px);
   }
 }
