@@ -1,3 +1,4 @@
+import { HashLink as Link } from "react-router-hash-link";
 const HomeScreen = () => {
   return (
     <div className="main-screen">
@@ -11,9 +12,9 @@ const HomeScreen = () => {
             </span>{" "}
             очереди
           </h1>
-          <button type="button" className="main-screen__button">
+          <Link to="/#consultation" className="main-screen__button">
             запишись на консультацию
-          </button>
+          </Link>
         </div>
       </div>
     </div>

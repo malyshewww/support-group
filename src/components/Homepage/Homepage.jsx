@@ -55,10 +55,10 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-        {/* <HomeSteps />
-        <HomeConsultation /> */}
+        <HomeSteps />
+        <HomeConsultation />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

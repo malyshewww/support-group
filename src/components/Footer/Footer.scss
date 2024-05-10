@@ -7,11 +7,23 @@
     padding: 50px 0;
     border-top: 1px solid rgba(47, 53, 63, 0.5);
     border-bottom: 1px solid rgba(47, 53, 63, 0.5);
+    @media screen and (max-width: $lg) {
+      margin: 0 10px;
+      padding: 30px 0;
+    }
   }
   &__body {
     display: flex;
     align-items: center;
     gap: 0 178px;
+    @media screen and (max-width: $xxxl) {
+      gap: 0 80px;
+    }
+    @media screen and (max-width: $lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
   }
   &__main {
     display: flex;
@@ -19,6 +31,9 @@
   }
   &__logo {
     margin-bottom: 100px;
+    @media screen and (max-width: $lg) {
+      margin-bottom: 30px;
+    }
   }
   &__email {
     font-family: font6;
@@ -32,7 +47,11 @@
     margin-top: 50px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
+    @media screen and (max-width: $lg) {
+      margin-top: 30px;
+    }
   }
   &__menu {
   }
@@ -40,6 +59,14 @@
     flex: 1 1 auto;
     display: flex;
     justify-content: flex-end;
+    @media screen and (max-width: $lg) {
+      align-self: stretch;
+    }
+  }
+  &__link {
+    @media screen and (max-width: $lg) {
+      width: 100%;
+    }
   }
 }
 
@@ -60,9 +87,23 @@ a.footer__email {
 }
 
 .menu-footer {
+  flex: 1 1 auto;
   display: flex;
-  gap: 0 121px;
-  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  @media screen and (max-width: $xxxl) {
+    flex-direction: column;
+  }
+  &__nav {
+    display: flex;
+    gap: 0 121px;
+    align-items: flex-start;
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
   &__list {
     gap: 16px;
   }

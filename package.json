@@ -1,6 +1,5 @@
 {
-  "homepage": "https://TheN0rt.github.io/calculator__univer",
-  "name": "calculator",
+  "name": "app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,11 +38,15 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "last 1 ie version"
     ]
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "sass": "^1.77.0"
+    "postcss": "^8.4.38",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.77.0",
+    "sass-loader": "^14.2.1"
   }
 }

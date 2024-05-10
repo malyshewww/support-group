@@ -166,39 +166,41 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer__menu menu-footer">
-              <div className="menu-footer__item">
-                <ul className="menu-footer__list">
-                  <li className="menu-footer__item">
-                    <Link to="/#advantages" className="menu-footer__link">
-                      почему мы?
-                    </Link>
-                  </li>
-                  <li className="menu-footer__item">
-                    <Link to="/#services" className="menu-footer__link">
-                      наш сервис
-                    </Link>
-                  </li>
-                </ul>
+              <nav className="menu-footer__nav">
+                <div className="menu-footer__item">
+                  <ul className="menu-footer__list">
+                    <li className="menu-footer__item">
+                      <Link to="/#advantages" className="menu-footer__link">
+                        почему мы?
+                      </Link>
+                    </li>
+                    <li className="menu-footer__item">
+                      <Link to="/#services" className="menu-footer__link">
+                        наш сервис
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="menu-footer__item">
+                  <ul className="menu-footer__list">
+                    <li className="menu-footer__item">
+                      <Link to="/#direction" className="menu-footer__link">
+                        направления
+                      </Link>
+                    </li>
+                    <li className="menu-footer__item">
+                      <Link to="/#steps" className="menu-footer__link">
+                        этапы работы
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <div className="footer__actions">
+                <Link to="/" className="footer__link btn">
+                  контакты
+                </Link>
               </div>
-              <div className="menu-footer__item">
-                <ul className="menu-footer__list">
-                  <li className="menu-footer__item">
-                    <Link to="/#direction" className="menu-footer__link">
-                      направления
-                    </Link>
-                  </li>
-                  <li className="menu-footer__item">
-                    <Link to="/#steps" className="menu-footer__link">
-                      этапы работы
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="footer__actions">
-              <Link to="/" className="footer__link btn">
-                контакты
-              </Link>
             </div>
           </div>
         </div>

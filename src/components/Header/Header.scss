@@ -53,6 +53,25 @@
     }
   }
   &__menu {
+    @media screen and (max-width: $md) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100dvh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: #fff;
+      padding: 80px 20px 20px;
+      opacity: 0;
+      transition: opacity 0.15s;
+      pointer-events: none;
+      z-index: 5;
+      &.menu-open {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
   }
   &__logo {
     display: flex;
@@ -98,9 +117,6 @@
 }
 
 .menu {
-  @media screen and (max-width: $md) {
-    display: none;
-  }
   &__list {
     list-style: none;
     display: flex;
@@ -111,6 +127,9 @@
     @media screen and (max-width: $xxl) {
       gap: 16px;
     }
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+    }
   }
   &__item {
     width: 235px;
@@ -120,6 +139,11 @@
     text-align: center;
     @media screen and (max-width: $xxxl) {
       width: auto;
+    }
+    @media screen and (max-width: $md) {
+      width: 100%;
+      display: block;
+      text-align: left;
     }
   }
   &__link {
@@ -141,6 +165,12 @@
     @media screen and (max-width: $xxxl) {
       font-size: 24px;
     }
+    @media screen and (max-width: $md) {
+      color: #000;
+      font-size: 32px;
+      text-align: left;
+      display: inline;
+    }
   }
 }
 
@@ -153,6 +183,7 @@
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
+    z-index: 10;
     & span,
     &::before,
     &::after {
@@ -161,7 +192,7 @@
       width: 100%;
       background-color: #fff;
       left: 0;
-      transition: all 0.5s;
+      transition: all 0.3s;
     }
     &::before,
     &::after {
@@ -176,6 +207,24 @@
     }
     &::after {
       bottom: 0;
+    }
+    &.active {
+      & span,
+      &::before,
+      &::after {
+        background-color: #000;
+      }
+      &::before {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+      &::after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(45deg);
+      }
+      & span {
+        transform: scale(0);
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 const HomeConsultation = () => {
   return (
-    <section className="consultation">
+    <section className="consultation" id="consultation">
       <div className="consultation__wrapper">
         <div className="container">
           <div className="consultation__body">

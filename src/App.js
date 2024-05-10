@@ -90,7 +90,6 @@ function App() {
       removeAllItemsFromSummaryData();
     });
   };
-  console.log(process.env.PUBLIC_URL);
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>

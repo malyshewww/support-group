@@ -1,3 +1,4 @@
+/* autoprefixer grid: autoplace */
 @font-face {
   font-family: "Inconsolata";
   src: url("../public/fonts/Inconsolata-Regular.woff2") format("woff2"),
@@ -234,6 +235,9 @@ body {
   background-image: url("./img/homepage/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 h2 {

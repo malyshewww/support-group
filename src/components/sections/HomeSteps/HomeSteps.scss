@@ -1,11 +1,21 @@
 .steps {
   padding: 119px 0 90px;
+  @media screen and (max-width: $xxxl) {
+    padding: 60px 0;
+  }
+  @media screen and (max-width: $lg) {
+    padding: 40px 0;
+  }
   &__body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     width: 100%;
     position: relative;
+    @media screen and (max-width: $lg) {
+      grid-template-columns: 1fr;
+      gap: 80px;
+    }
   }
   &__progress {
     position: absolute;
@@ -13,6 +23,12 @@
     top: 33px;
     width: 100%;
     background: rgba(147, 150, 155, 0.5);
+    @media screen and (max-width: $lg) {
+      top: 0;
+      width: 3px;
+      height: 100%;
+      left: 33px;
+    }
   }
 }
 
@@ -23,12 +39,20 @@
   gap: 18px;
   align-items: center;
   text-align: center;
+  @media screen and (max-width: $lg) {
+    align-items: flex-start;
+    text-align: left;
+  }
   &:first-child {
     align-items: flex-start;
   }
   &:nth-child(5) {
     align-items: flex-end;
     text-align: right;
+    @media screen and (max-width: $lg) {
+      align-items: flex-start;
+      text-align: left;
+    }
   }
   &__dot {
     height: 66px;
@@ -52,5 +76,14 @@
   &__content {
     font-family: $second-family;
     line-height: 130%;
+    @media screen and (max-width: $xxl) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: $lg) {
+      position: absolute;
+      left: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
